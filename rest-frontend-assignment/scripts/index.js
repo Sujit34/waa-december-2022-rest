@@ -65,6 +65,29 @@ const addNewCourse = async () => {
     }
 }
 
+const addNewStudents = async () => {
+
+    let results = await fetch('http://localhost:8080/students/', {
+        method: 'POST',
+       
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            id: document.getElementById('id').value,
+            firstname: document.getElementById('firstname').value,
+            lastname: document.getElementById('lastname').value,
+            email: document.getElementById('email').value,
+            major: document.getElementById('major').value,
+            coursetaken: document.getElementById('coursetaken').value,
+        })
+    });
+
+    if (results.status === 200 || results.status === 201) {
+        load();
+    }
+}
+
 
 const updateDomWithCourses = function (courses) {
 

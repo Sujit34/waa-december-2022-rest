@@ -41,6 +41,32 @@
 				</tr>
             </table>
         </div>
+        <div class="course-container">
+            <h1 class="produc-list-header">All Students</h1>
+            <table id="items-table" class="data-table">
+            </table>
+            <h1 class="produc-list-header">Add new Students</h1>
+            <table id="items-table" class="data-table">
+				<tr>
+					<th>ID</th>
+					<th>FisrtName</th>
+					<th>LastName</th>
+					<th>Email</th>
+                    <th>Major</th>
+                    <th>CourseTaken</th>
+                    <th>Action</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="id" id="id"></td>
+					<td><input type="text" name="firstname" id="firstname"></td>
+					<td><input type="text" name="lastname" id="lstname"></td>
+                    <td><input type="text" name="eamil" id="email"></td>
+                    <td><input type="text" name="major" id="major"></td>
+                    <td><input type="text" name="coursetaken" id="coursetaken"></td>
+					<td><button onclick="addNewStudents()"> Add Student</button></td>
+				</tr>
+            </table>
+        </div>
         <div id="place-order-buttton" class="place-order-details">
             <div class="place-order-buttton-container">
                 <button id="place-order-buttton" class="place-order-buttton">Place Order</button>
